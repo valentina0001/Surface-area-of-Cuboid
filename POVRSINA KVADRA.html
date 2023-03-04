@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+<body>
+
+  <head>
+      <title> Assignment - JS funkcije i objekti </title>
+  </head>
+
+<body>
+
+      <h1> POVRŠINA KVADRA</h1>
+	  
+      Unesite stranicu : A: <input type="text" id ="A"><br>
+      <br>
+      Unesite stranicu : B: <input type="text" id ="B"><br>
+      <br>
+      Unesite stranicu : C: <input type="text" id ="C"><br>
+      <br>
+	  
+      <input type="submit" value='Izračunaj' onclick ="Izračunaj()"> 
+      
+	  <p> Površina kvadra je: </p>
+	  
+      <p id="rezultat"></p>
+  
+    </form>
+  </body>
+
+  <script>
+  
+          function Izračunaj() {
+		  
+          var A = document.getElementById("A").value;
+          var B = document.getElementById("B").value;
+          var C = document.getElementById("C").value;
+	
+          if ( !(A  <= 0  || B <=0 || C <= 0) ){
+          
+         var rezultat = 2 * ( Number(A) * Number(B) + Number(B) * Number(C) + Number(A) * Number(C)); 
+         document.getElementById("rezultat").innerHTML = rezultat; 
+		 
+		 } else { 
+		 
+		 alert( "Unesite broj veći od 0 za sve tri stranice kvadra!");}}
+
+  </script>
+
+</html>
